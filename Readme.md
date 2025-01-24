@@ -1,4 +1,4 @@
-# Folder tree structure CLI Application
+# Folder Tree Structure CLI Application
 
 This is a **Command-Line Interface (CLI)** application designed for managing files and folders. The application provides an intuitive way to create, view, retrieve, search, and remove files and folders in a hierarchical structure. It also supports displaying folder structures and cleaning up directories when exiting the application.
 
@@ -12,7 +12,7 @@ This is a **Command-Line Interface (CLI)** application designed for managing fil
 - **Retrieve Files**:
   - Retrieve a specific file from a specified folder.
 - **Retrieve Folders**:
-  - Retrieve all sub folders and files in a folder path
+  - Retrieve all subfolders and files in a folder path.
   
 ### 2. **Search Functionality**
 - **Search File**:
@@ -48,60 +48,82 @@ This is a **Command-Line Interface (CLI)** application designed for managing fil
 
 ## How to Use
 
-1. **Clone github repository:
+1. **Clone GitHub Repository**:
    - Ensure you have Node.js installed.
-   - Clone repository
-      ```
-        git clone 
+   - Clone the repository:
+      ```bash
+      git clone https://github.com/longtk26/OVEN-BACKEND-TECHNICAL-TEST.git
       ```
 
 2. **Run the Application**:
-   - Execute the application with the following command:
+   - Navigate to the project directory and execute the application with the following command:
      ```bash
      npm run dev
      ```
 
 3. **Navigate through Options**:
    - Follow the prompts to perform desired actions.
-   - Enter folder paths in the format: `folder1/folder2`.
 
 ---
 
 ## Example Usage
-
-- **Create a File**:
+- **View folder structure**:
   - Input:
+    ```bash
+    Enter your choice: 1
     ```
-    Enter the folder path (example: folder1/folder2): folder1
-    Enter the file name: myfile.txt
-    Enter the file content: Hello, world!
+  - Output example:
+    ```
+    ====Viewing folder structure====
+    └── routes
+        ├── config
+        │   └── index.txt
+        └── services
+            └── index.txt
+    ====End of folder structure====
+    ```
+- **Create a Folder**:
+  - Input:
+    ```bash
+    Enter your choice: 2
+    Enter the folder name: folder1/folder2
     ```
   - Output:
-    ```
-    ====Creating a file====
-    ====File created====
+    ```bash
+    ====Creating a folder====
+    Enter the folder name: routes/config
+      └── routes
+          └── config
+    ====Folder created====
     ```
 
 - **Search for a File**:
   - Input:
-    ```
-    Enter the file name: myfile.txt
+    ```bash
+    Enter your choice: 8
+    Enter the file name: index.txt
     ```
   - Output:
-    ```
+    ```bash
     ====Searching a file====
-    File found in folder: folder1
+    Enter the file name: index.txt
+    File "index.txt" found in the following folders:
+    File in folder: /root/interview/OVEN/src/output/routes/config, File: index.txt
     ====File found====
     ```
 
 - **Delete a Folder**:
   - Input:
-    ```
-    Enter the folder path: folder1
+    ```bash
+    Enter your choice: 7
+    Enter the folder path: folder1/folder2
     ```
   - Output:
-    ```
+    ```bash
     ====Removing a folder====
+    Enter the folder path: routes/config
+    Folder "routes/config" removed successfully.
+    └── routes
     ====Folder removed====
     ```
 
@@ -109,19 +131,22 @@ This is a **Command-Line Interface (CLI)** application designed for managing fil
 
 ## Code Structure
 
+### **Core Components**
+
 - **`Functions` Class**:
   - Implements core functionalities like viewing, creating, retrieving, searching, and deleting files or folders.
 
 - **Services**:
   - `folderService`:
-    - Handles operations related to folders.
-  - `fileService`:
-    - Handles operations related to files.
+    - Handles operations related to folders and files, including creating, deleting, and displaying folder structures.
 
----
-
-## Notes
-- Ensure valid folder paths and file names when prompted.
+- **File Factory**:
+  - **Purpose**:
+    - Provides a centralized mechanism to manage file creation and manipulation.
+  - **Responsibilities**:
+    - Abstracts the process of file creation and ensures all file types are handled consistently.
+    - Includes logic for initializing files with default or user-specified content.
+    - Plays a crucial role in decoupling file operations from higher-level services.
 
 ---
 

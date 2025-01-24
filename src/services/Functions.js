@@ -1,7 +1,6 @@
 class Functions {
-    constructor(folderService, fileService) {
+    constructor(folderService) {
         this.folderService = folderService;
-        this.fileService = fileService
     }
     viewFolderStructure(rl, app) {
         console.log('====Viewing folder structure====');

@@ -11,14 +11,9 @@ class Factory {
         return new Folder();
     }
 
-    getFileService() {
-        return new File();
-    }
-
     getListFunctions() {
         return new Functions(
             this.getFolderService(),
-            this.getFileService()
         );
     }
 }
