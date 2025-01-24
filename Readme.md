@@ -57,6 +57,7 @@ https://github.com/user-attachments/assets/6fb88cac-0288-4ad4-811e-33fe29aaaddd
    - Clone the repository:
       ```bash
       git clone https://github.com/longtk26/OVEN-BACKEND-TECHNICAL-TEST.git
+      cd OVEN-BACKEND-TECHNICAL-TEST/
       ```
 
 2. **Run the Application**:
