@@ -12,8 +12,14 @@ class Folder {
         this.files = []; // List of File objects
         this.folderPath = path.resolve(__dirname, '../output');
         this.foldersV2 = [];
+        this.initOutputFolder();
     }
 
+    initOutputFolder() {
+        if (!fs.existsSync(this.folderPath)) {
+            fs.mkdirSync(this.folderPath);
+        }
+    }
 
     addFile(pathInput, fileName, content) {
         // Check path validity
