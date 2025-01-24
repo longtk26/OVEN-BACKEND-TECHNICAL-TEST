@@ -248,6 +248,12 @@ class Folder {
     searchFile(fileName) {
         // Console.log folders that contain the file
         const folders = this.foldersV2.filter(folder => folder.listFiles.some(file => file.name === fileName));
+        
+        if (folders.length === 0) {
+            console.log(`No folders found containing file "${fileName}".`);
+            return;
+        }
+        
         console.log(`File "${fileName}" found in the following folders:`);
         folders.forEach(folder => console.log(
             `File in folder: ${folder.path}, File: ${fileName}`
