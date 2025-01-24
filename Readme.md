@@ -7,6 +7,9 @@ This is a **Command-Line Interface (CLI)** application designed for managing fil
 
 https://github.com/user-attachments/assets/6fb88cac-0288-4ad4-811e-33fe29aaaddd
 
+If the link doesn't work, please refer to the alternative link:
+[Video](https://www.youtube.com/watch?v=BdTjV4zNmi0)
+
 
 ## Features
 
